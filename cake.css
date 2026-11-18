@@ -1,0 +1,41 @@
+.ck-eyebrow{font:700 11px Quicksand,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#7A2E41}
+.ck-title{font:italic 600 26px "Playfair Display",Georgia,serif;margin:4px 0 6px;color:#4A2C34}
+.ck-hint{font:600 12px/1.5 Quicksand,sans-serif;color:#4A2C34;opacity:.85;margin:0 0 10px;min-height:18px;max-width:320px}
+.ck-hide{display:none!important}
+.ck-stage{position:relative;width:min(88vw,340px,44dvh);aspect-ratio:1;border-radius:28px;background:rgba(255,244,222,.6);border:1px solid #fff;box-shadow:0 12px 32px rgba(122,46,65,.15);transition:background .8s,box-shadow .8s}
+.ck-stage.dim{background:radial-gradient(circle at 50% 38%,#6b3a47,#2b171d);box-shadow:0 12px 40px rgba(43,23,29,.5)}
+.ck-stage svg{width:100%;height:100%;display:block;--frost:#FFCED8;overflow:visible}
+.frost{fill:var(--frost,#FFCED8)}
+.cdl{cursor:pointer}
+.cdl .cfl{opacity:0;transform:scale(0);transform-box:fill-box;transform-origin:50% 100%;transition:opacity .3s,transform .3s}
+.cdl.on .cfl{opacity:1;transform:scale(1);animation:flick 1s infinite alternate ease-in-out}
+@keyframes flick{to{transform:scale(.94,1.07) rotate(2deg)}}
+.csm{opacity:0;transform-box:fill-box}
+.cdl.puff .csm{animation:puff 1.6s ease-out}
+@keyframes puff{0%{opacity:.7;transform:translateY(0) scale(.8)}100%{opacity:0;transform:translateY(-26px) scale(1.8)}}
+.drop{animation:dropIn .45s cubic-bezier(.3,1.6,.5,1);transform-box:fill-box;transform-origin:center}
+@keyframes dropIn{from{opacity:0;transform:translateY(-26px) scale(.3)}}
+#ck-cutg{display:none}
+.showcut #ck-cutg{display:block}
+#ck-slice{transition:transform .9s cubic-bezier(.4,.1,.2,1)}
+.cut #ck-slice{transform:translate(34px,5px)}
+.ck-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px;align-items:center}
+.ck-btn{border:0;border-radius:999px;padding:10px 20px;background:linear-gradient(135deg,#7A2E41,#C85A72);color:#fff;font:700 13px Quicksand,sans-serif;cursor:pointer;box-shadow:0 6px 16px rgba(122,46,65,.3)}
+.ck-btn.alt{background:#FFE8C4;color:#7A2E41;box-shadow:none}
+.ck-btn:disabled{opacity:.6;cursor:default}
+.ck-link{background:none;border:0;color:#7A2E41;text-decoration:underline;font:700 11px Quicksand,sans-serif;cursor:pointer}
+.ck-card{margin-top:12px;padding:14px 16px;border-radius:22px;background:rgba(255,244,222,.92);border:1px solid #fff;box-shadow:0 10px 26px rgba(122,46,65,.15);max-width:340px;animation:cardPopIn .4s cubic-bezier(.22,1,.36,1)}
+.ck-msg{margin:0 0 2px;font:italic 600 18px "Playfair Display",Georgia,serif;color:#7A2E41}
+.ck-sub{margin:0 0 6px;font:600 12px/1.5 Quicksand,sans-serif;color:#4A2C34}
+.ck-tools{display:none;margin-top:10px;padding:10px 14px;border-radius:18px;background:rgba(255,244,222,.92);border:1px solid #fff;gap:8px;flex-direction:column;align-items:center;font:700 11px Quicksand,sans-serif;color:#7A2E41}
+.ck-tools.open{display:flex}
+.ck-tools small{font-weight:600;opacity:.75}
+.ck-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
+.ck-chip{border:1px solid #fff;background:#FFE8C4;color:#7A2E41;border-radius:999px;min-width:28px;padding:3px 9px;font:700 12px Quicksand,sans-serif;cursor:pointer}
+.ck-chip.sel,.ck-dot.sel{box-shadow:0 0 0 2px #7A2E41}
+.ck-dot{width:22px;height:22px;border-radius:50%;border:2px solid #fff;cursor:pointer;box-shadow:0 0 0 1px #E9D3B8;display:inline-block}
+.bln{position:fixed;bottom:-90px;z-index:45;pointer-events:none;border-radius:50% 50% 48% 48%;animation:rise var(--d) ease-in forwards}
+.bln::after{content:"";position:absolute;left:50%;top:100%;width:1.5px;height:46px;background:rgba(122,46,65,.4)}
+@keyframes rise{to{transform:translate(var(--sw),-125vh)}}
+#step-4{justify-content:flex-start;overflow-y:auto}
+#step-4>div{margin-block:auto}

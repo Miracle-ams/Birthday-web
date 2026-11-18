@@ -156,7 +156,7 @@ function drawCapybaraFilter(face, px, faceWidth, faceHeight, headTop, mouthMid, 
 const stickerLeft = px(face[234]);
 const stickerRight = px(face[454]);
 
-const stickerWidth = faceWidth * 0.45;
+const stickerWidth = faceWidth * 0.40;
 
 // Stiker kiri: sedikit masuk ke area wajah.
 if (capybaraFlower.complete && capybaraFlower.naturalWidth) {
@@ -166,7 +166,7 @@ if (capybaraFlower.complete && capybaraFlower.naturalWidth) {
 
   ctx.save();
   ctx.translate(
-    stickerLeft.x + faceWidth * -0.43,
+    stickerLeft.x + faceWidth * -0.35,
     stickerLeft.y + faceHeight * 0.50
     );
   ctx.rotate(roll);
@@ -182,7 +182,7 @@ if (capybaraWink.complete && capybaraWink.naturalWidth) {
 
     ctx.save();
     ctx.translate(
-      stickerRight.x - faceWidth * -0.40,
+      stickerRight.x - faceWidth * -0.32,
       stickerRight.y + faceHeight * 0.50
     );
   ctx.rotate(roll);
